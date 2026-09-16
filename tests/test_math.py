@@ -1,5 +1,5 @@
 import pytest
-from utils.math import add
+from utils.math import add, sub
 
 
 def test_add_simple_sum():
@@ -13,3 +13,7 @@ def test_add_simple_sum():
 ])
 def test_add_parametrized(a, b, expected):
     assert add(a, b) == expected, f"Expected {a}+{b}={expected}"
+
+
+def test_subtract():
+    assert sub(5, 2) == 3
